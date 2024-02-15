@@ -7,26 +7,7 @@ use yii\db\Migration;
  */
 class m240213_135450_Client extends Migration
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function safeUp()
-    {
 
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function safeDown()
-    {
-        echo "m240213_135450_Client cannot be reverted.\n";
-
-        return false;
-    }
-
-
-    // Use up()/down() to run migration code without a transaction.
     public function up(): void
     {
         $this->createTable('{{%client}}', [
@@ -34,7 +15,6 @@ class m240213_135450_Client extends Migration
             'full_name' => $this->string()->notNull(),
             'gender' => $this->string(),
             'birth_date' => $this->date(),
-            'available_clubs' => $this->text(),
             'creation_date' => $this->dateTime(),
             'created_by' => $this->integer(),
             'update_date' => $this->dateTime(),
