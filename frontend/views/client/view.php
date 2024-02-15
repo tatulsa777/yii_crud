@@ -4,14 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var backend\models\Club $model */
+/** @var backend\models\Client $model */
 
-$this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Clubs', 'url' => ['index']];
+$this->title = $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Clients', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="club-view">
+<div class="client-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -30,8 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'name',
-            'address:ntext',
+            'full_name',
+            'gender',
+            'birth_date',
+            'available_clubs',
             'creation_date',
             'created_by',
             'update_date',

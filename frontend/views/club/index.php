@@ -33,11 +33,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'address:ntext',
             'creation_date',
-            'created_by',
-            //'update_date',
-            //'updated_by',
-            //'delete_date',
-            //'deleted_by',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Club $model, $key, $index, $column) {
